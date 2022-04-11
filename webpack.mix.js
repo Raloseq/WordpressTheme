@@ -1,5 +1,14 @@
 let mix = require('laravel-mix');
 
 mix.js('src/js/app.js', 'js')
-   .sass('src/scss/app.scss', 'css')
-   .setPublicPath('assets');
+mix.sass('src/scss/app.scss', 'css')
+mix.setPublicPath('assets');
+
+mix.browserSync({
+   proxy: "http://sportanddiet.local/",
+   files: [
+         './**/*.php',
+         './**/*.js',
+         './**/*.css',
+   ]
+});

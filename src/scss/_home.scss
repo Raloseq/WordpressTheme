@@ -1,0 +1,96 @@
+.app-home {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    color: rgb(50,205,50);
+
+    .app-home__heading {
+        position: relative;
+        z-index: 1;
+        font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .app-home__description {
+        position: relative;
+        z-index: 1;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        margin: 40px 0;
+    }
+
+    .app-home__btn {
+        position: relative;
+        z-index: 1;
+        padding: 15px;
+        border-radius: 50px;
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        border: 2px solid rgb(50,205,50);
+        background-color: transparent;
+        color: rgb(50,205,50);
+        transition: .3s ease-in;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(50,205,50);
+            color: white;
+        }
+    }
+    
+    .waves {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background-color: rgb(50,205,50);  
+        transition: 500ms;
+
+        @media (min-width:720px) {
+            height: 200px;
+        }
+
+        @media (min-width:1024px) {
+            height: 300px;
+        }
+
+        &::before,&::after {
+            content: '';
+            position: absolute;
+            width: 300vw;
+            height: 300vw;
+            top: -65vw;
+            left: 50%;
+            transform: translate(-50%,-75%);
+        }
+
+        &::before {
+            border-radius: 44%;
+            background: rgba(255,255,255,1);
+            animation: waves 8s linear infinite;
+        }
+
+        &::after {
+            border-radius: 44%;
+            background: rgba(255,255,255,0.5);
+            animation: waves 15s linear infinite;
+        }
+
+
+        @keyframes waves {
+            0% {
+                transform: translate(-50%,-75%) 
+                           rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%,-75%) 
+                           rotate(360deg);
+            }
+        }
+    }
+}

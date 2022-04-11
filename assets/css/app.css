@@ -1,4 +1,260 @@
-body {
-  color: red;
-  background-color: aliceblue;
+.app-nav {
+  position: fixed;
+  background-color: rgb(50, 205, 50);
+  z-index: 99999;
+  width: 100%;
+  font-size: clamp(1rem, 2vw, 1.8rem);
+  padding: 20px;
+}
+.app-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.app-nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+.app-nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.app-nav ul li a:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.app-nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.app-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgb(50, 205, 50);
+  color: white;
+}
+.app-about .app-about__heading {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin: 30px 0;
+}
+.app-about .app-about__description {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  width: 90%;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+@media (min-width: 720px) {
+  .app-about .app-about__description {
+    width: 75%;
+  }
+}
+@media (min-width: 1024px) {
+  .app-about .app-about__description {
+    width: 60%;
+  }
+}
+
+.app-home {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1;
+  color: rgb(50, 205, 50);
+}
+.app-home .app-home__heading {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+.app-home .app-home__description {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin: 40px 0;
+}
+.app-home .app-home__btn {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  border: 2px solid rgb(50, 205, 50);
+  background-color: transparent;
+  color: rgb(50, 205, 50);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+.app-home .app-home__btn:hover {
+  background-color: rgb(50, 205, 50);
+  color: white;
+}
+.app-home .waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: rgb(50, 205, 50);
+  transition: 500ms;
+}
+@media (min-width: 720px) {
+  .app-home .waves {
+    height: 200px;
+  }
+}
+@media (min-width: 1024px) {
+  .app-home .waves {
+    height: 300px;
+  }
+}
+.app-home .waves::before, .app-home .waves::after {
+  content: "";
+  position: absolute;
+  width: 300vw;
+  height: 300vw;
+  top: -65vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.app-home .waves::before {
+  border-radius: 44%;
+  background: rgb(255, 255, 255);
+  -webkit-animation: waves 8s linear infinite;
+          animation: waves 8s linear infinite;
+}
+.app-home .waves::after {
+  border-radius: 44%;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-animation: waves 15s linear infinite;
+          animation: waves 15s linear infinite;
+}
+@-webkit-keyframes waves {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+.app-offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: rgb(50, 205, 50);
+}
+.app-offer .app-offer__heading {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin: 30px 0;
+}
+.app-offer .app-offer__description {
+  text-align: center;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  width: 90%;
+  line-height: 1.5rem;
+}
+@media (min-width: 720px) {
+  .app-offer .app-offer__description {
+    width: 75%;
+  }
+}
+@media (min-width: 1024px) {
+  .app-offer .app-offer__description {
+    width: 60%;
+  }
+}
+.app-offer .app-offer__card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+}
+.app-offer .app-offer__card-wrapper .app-offer__card {
+  width: 90%;
+  height: 60vh;
+  margin: 10px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-heading {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  width: 100%;
+}
+.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-description {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: 20px;
+}
+.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-link {
+  display: block;
+  border-radius: 50px;
+  padding: 10px;
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-link:hover {
+  background-color: white;
+  color: black;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }

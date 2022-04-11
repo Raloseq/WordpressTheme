@@ -1,0 +1,41 @@
+.app-nav {
+    position: fixed;
+    background-color: rgb(50,205,50);
+
+    z-index: 99999;
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    padding: 20px;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+
+        li {
+            position: relative; 
+            margin: 0 15px;
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:after {    
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: #fff;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                  }
+                  &:hover:after { 
+                    width: 100%; 
+                    left: 0; 
+                  }
+            }
+        }
+    }
+}

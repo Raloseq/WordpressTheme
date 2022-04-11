@@ -13,3 +13,15 @@ function raloseqfitness_register_scripts()
 }
 
 add_action( 'wp_enqueue_scripts', 'raloseqfitness_register_scripts' );
+
+function raloseqfitness_menus() 
+{
+    $locations = array( 
+        'primary' => 'Main Navbar',
+        'footer'  => 'Footer Nabar'
+    );
+
+    register_nav_menus( $locations );
+}
+
+add_action( 'init', 'raloseqfitness_menus' );

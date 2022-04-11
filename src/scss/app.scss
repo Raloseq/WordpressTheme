@@ -1,4 +1,15 @@
-body {
-    color: red;
-    background-color: aliceblue;
+@use 'header';
+@use 'nav';
+@use 'about';
+@use 'home';
+@use 'offer';
+
+*, *::before,*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
