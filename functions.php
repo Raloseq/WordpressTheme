@@ -1,5 +1,9 @@
 <?php
 
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 300, 300);
+add_image_size( 'single-post-thumbnail', 590, 180 );
+
 function raloseqfitness_register_styles()
 {
     wp_enqueue_style( 'raloseqfitness-main', get_template_directory_uri(  ) . "/assets/css/app.css" );

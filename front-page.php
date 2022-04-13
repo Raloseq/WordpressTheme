@@ -38,10 +38,33 @@
             </div>
         </div>
     </section>
-    <section id="blog">
-    
+    <section id="blog" class="app-blog" style="background-image: url(<?php echo get_theme_file_uri('images/blog.jpg') ?>)">
+        <div class="background"></div>
+        <div class="foreground">
+            <h2 class="app-blog__heading">Blog</h2>
+            <p class="app-blog__description">Check our latest blog posts !</p>
+            <div class="app-blog__posts">
+                <?php if(have_posts(  )): ?>
+                    <?php while(have_posts(  )): the_post(  )?>     
+                        <div class="app-blog__post">
+                            <div class="app-blog__post-header"><?php the_post_thumbnail( ) ?></div>
+                            <div class="app-blog__post-content">
+                                <p class="app-blog__post-category"><?php the_category( )?></p>
+                                <h3 class="app-blog__post-title"><?php the_title( )?></h3>
+                                <p class="app-blog__post-excerpt"><?php  echo wp_trim_words( get_the_content( ), 18 );?></p>
+                            </div>           
+                            <div class="app-blog__post-footer">
+                                <p class="post-footer__author">Author: <?php the_author( )?></p>
+                                <a href="<?php the_permalink( )?>" class="post-footer__permalink">Read</a>
+                            </div>
+                        </div>         	
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+        
     </section>
-    <section id="contact">
+    <section id="contact" style="height: 100vh">
     
     </section>
 </main>

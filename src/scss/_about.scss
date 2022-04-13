@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 20px 50px;
     background-color: rgb(50,205,50);
     color: white;
     
@@ -17,7 +17,6 @@
         font-size: clamp(1.2rem, 2.5vw, 1.8rem);
         width: 90%;
         text-align: justify;
-        line-height: 1.5rem;
 
         @media (min-width: 720px) {
             width: 75%;
