@@ -1,0 +1,108 @@
+.app-footer {
+    background-color: #11a06c;
+    padding: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .app-footer__nav {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+            }
+            li {
+                position: relative; 
+                margin: 15px 0;
+                
+                @media (min-width: 768px) {
+                    margin: 0 15px;
+                }
+
+                a {
+                    color: white;
+                    text-decoration: none;
+
+                }
+            }
+        }
+    }
+
+    .app-footer__social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .social-links__heading {
+            text-align: center;
+            color: white;
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        }
+
+        .links {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .fa {
+                padding: 20px;
+                width: 60px;
+                font-size: 20px;
+                text-align: center;
+                text-decoration: none;
+                margin: 10px;
+              }
+              
+              .fa:hover {
+                  opacity: 0.7;
+              }
+              
+              .fa-facebook {
+                background: #3B5998;
+                color: white;
+              }
+              
+              .fa-twitter {
+                background: #55ACEE;
+                color: white;
+              }
+              
+              .fa-google {
+                background: #dd4b39;
+                color: white;
+              }
+              
+              .fa-linkedin {
+                background: #007bb5;
+                color: white;
+              }
+              
+              .fa-youtube {
+                background: #bb0000;
+                color: white;
+              }
+              
+              .fa-instagram {
+                background: #125688;
+                color: white;
+              }
+        }
+        
+    }
+}

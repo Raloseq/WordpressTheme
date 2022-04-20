@@ -7,6 +7,8 @@ add_image_size( 'single-post-thumbnail', 590, 180 );
 function raloseqfitness_register_styles()
 {
     wp_enqueue_style( 'raloseqfitness-main', get_template_directory_uri(  ) . "/assets/css/app.css" );
+    wp_enqueue_style('font-awesome','//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    wp_enqueue_style('custom-google-font', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
 }
 
 add_action( 'wp_enqueue_scripts', 'raloseqfitness_register_styles' );
@@ -22,7 +24,7 @@ function raloseqfitness_menus()
 {
     $locations = array( 
         'primary' => 'Main Navbar',
-        'footer'  => 'Footer Nabar'
+        'footer'  => 'Footer Navbar'
     );
 
     register_nav_menus( $locations );
