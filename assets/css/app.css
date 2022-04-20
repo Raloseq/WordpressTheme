@@ -292,7 +292,7 @@
 }
 .app-blog .foreground .app-blog__posts .app-blog__post {
   margin: 20px auto;
-  width: clamp(20rem, 20rem + 2vw, 22rem);
+  width: clamp(20rem, 20rem + 4vw, 22rem);
   overflow: hidden;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 1em;
