@@ -64,8 +64,12 @@
         </div>
         
     </section>
-    <section id="contact" style="height: 100vh">
-    
+    <section id="contact" class="app-contact">	
+        <h2 class="app-contact__heading">Contact</h2>
+        <p class="app-contact__description">If u have any questions feel free to ask them</p>
+        <div class="app-contact__form">
+            <?php echo apply_shortcodes( '[contact-form-7 id="41" title="Contact form 1"]' ); ?>
+        </div>
     </section>
 </main>
     

@@ -341,6 +341,65 @@
   color: white;
 }
 
+.app-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  color: white;
+  background-color: #04AA6D;
+}
+.app-contact .app-contact__heading {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin: 30px 0;
+}
+.app-contact .app-contact__description {
+  text-align: center;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+}
+.app-contact .app-contact__form {
+  margin: 20px 0;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  text-align: center;
+}
+.app-contact .app-contact__form form p {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+.app-contact .app-contact__form form p input {
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+.app-contact .app-contact__form form p textarea {
+  background-color: #04AA6D;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+.app-contact .app-contact__form form p input[type=button], .app-contact .app-contact__form form p input[type=submit], .app-contact .app-contact__form form p input[type=reset] {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 25px;
+  padding: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  width: 50%;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+.app-contact .app-contact__form form p input[type=button]:hover, .app-contact .app-contact__form form p input[type=submit]:hover, .app-contact .app-contact__form form p input[type=reset]:hover {
+  background-color: white;
+  color: #04AA6D;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
