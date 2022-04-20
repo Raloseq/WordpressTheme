@@ -1,9 +1,9 @@
+@use 'mixin' as m;
+@use 'variables' as c;
+
 .app-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-column-center;
     padding: 20px;
-    flex-direction: column;
     color: white;
     background-color: #04AA6D;
 
@@ -14,7 +14,7 @@
 
     .app-contact__description {
         text-align: center;
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        font-size: c.$description-size;
     }
 
     .app-contact__form {

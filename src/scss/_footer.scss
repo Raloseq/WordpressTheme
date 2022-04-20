@@ -1,11 +1,11 @@
+@use 'variables' as c;
+@use 'mixin' as m;
+
 .app-footer {
     background-color: #11a06c;
-    padding: 20px;
+    padding: c.$main-padding;
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include m.flex-column-center;
 
     @media (min-width: 768px) {
         flex-direction: row;
@@ -16,10 +16,7 @@
         font-size: clamp(1rem, 2vw, 1.5rem);
         ul {
             list-style-type: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include m.flex-column-center;
 
             @media (min-width: 768px) {
                 flex-direction: row;
@@ -42,22 +39,18 @@
     }
 
     .app-footer__social-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+      
+        @include m.flex-column-center;
 
         .social-links__heading {
             text-align: center;
             color: white;
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            font-size: c.$heading-size;
         }
 
         .links {
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include m.flex-center;
             flex-wrap: wrap;
 
             .fa {

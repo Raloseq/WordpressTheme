@@ -1,6 +1,8 @@
+@use 'variables' as c;
+
 .app-nav {
     position: fixed;
-    background-color: rgb(50,205,50);
+    background-color: c.$main-color;
 
     z-index: 99999;
     width: 100%;

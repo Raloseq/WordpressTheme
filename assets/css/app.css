@@ -230,9 +230,9 @@
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 .app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-description {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
   margin-bottom: 20px;
 }
 .app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-link {
@@ -245,7 +245,6 @@
   background-color: transparent;
   color: white;
   cursor: pointer;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
   transition: 0.3s ease;
   text-decoration: none;
 }
@@ -345,8 +344,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   flex-direction: column;
+  padding: 20px;
   color: white;
   background-color: #04AA6D;
 }
@@ -452,7 +451,7 @@
 .app-footer .app-footer__social-links .social-links__heading {
   text-align: center;
   color: white;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-size: clamp(2rem, 3vw, 3rem);
 }
 .app-footer .app-footer__social-links .links {
   display: flex;
