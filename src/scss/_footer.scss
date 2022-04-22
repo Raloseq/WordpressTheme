@@ -12,7 +12,7 @@
         justify-content: space-around;
         align-items: center;
     }
-    .app-footer__nav {
+    &__nav {
         font-size: clamp(1rem, 2vw, 1.5rem);
         ul {
             list-style-type: none;
@@ -38,7 +38,7 @@
         }
     }
 
-    .app-footer__social-links {
+    &__social-links {
       
         @include m.flex-column-center;
 

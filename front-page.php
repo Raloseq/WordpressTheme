@@ -8,8 +8,8 @@
         <div class="waves"></div>
     </section>
     <section id="about-us" class="app-about">
-        <h2 class="app-about__heading">About Us</h2>
-        <p class="app-about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur fringilla convallis. Aenean ligula sem, varius id aliquet ac, accumsan eu erat. Proin sollicitudin et turpis id pellentesque. Suspendisse aliquet sem ac justo faucibus, quis facilisis ligula auctor. Duis diam lectus, ultricies vel eros a, ultrices dictum mi. Suspendisse quis tincidunt urna. Curabitur vitae odio eget lorem gravida tincidunt nec vel erat. Aliquam suscipit urna nisl, consectetur tincidunt diam iaculis a.</p>
+        <h2 class="app-about__heading"><?php echo esc_attr( get_theme_mod('rf-aboutus-section-heading') )?></h2>
+        <p class="app-about__description"><?php echo esc_attr( get_theme_mod('rf-aboutus-section-description') )?></p>
     </section>
     <section id="offer" class="app-offer">
         <h2 class="app-offer__heading">Offer</h2>

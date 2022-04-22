@@ -7,13 +7,13 @@
     background-color: c.$main-color;
     color: white;
     
-    .app-about__heading {
+    &__heading {
         text-align: center;
         font-size: c.$heading-size;
         margin: 30px 0;
     }
 
-    .app-about__description {
+    &__description {
         font-size: c.$description-size;
         width: 90%;
         text-align: justify;

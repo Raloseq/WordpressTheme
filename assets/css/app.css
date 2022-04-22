@@ -45,23 +45,23 @@
   background-color: rgb(50, 205, 50);
   color: white;
 }
-.app-about .app-about__heading {
+.app-about__heading {
   text-align: center;
   font-size: clamp(2rem, 3vw, 3rem);
   margin: 30px 0;
 }
-.app-about .app-about__description {
+.app-about__description {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   width: 90%;
   text-align: justify;
 }
 @media (min-width: 720px) {
-  .app-about .app-about__description {
+  .app-about__description {
     width: 75%;
   }
 }
 @media (min-width: 1024px) {
-  .app-about .app-about__description {
+  .app-about__description {
     width: 60%;
   }
 }
@@ -79,18 +79,18 @@
   z-index: 1;
   color: rgb(50, 205, 50);
 }
-.app-home .app-home__heading {
+.app-home__heading {
   position: relative;
   z-index: 1;
   font-size: clamp(2rem, 3vw, 3rem);
 }
-.app-home .app-home__description {
+.app-home__description {
   position: relative;
   z-index: 1;
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   margin: 40px 0;
 }
-.app-home .app-home__btn {
+.app-home__btn {
   position: relative;
   z-index: 1;
   padding: 15px;
@@ -102,7 +102,7 @@
   transition: 0.3s ease-in;
   cursor: pointer;
 }
-.app-home .app-home__btn:hover {
+.app-home__btn:hover {
   background-color: rgb(50, 205, 50);
   color: white;
 }
@@ -171,28 +171,28 @@
   padding: 20px;
   color: rgb(50, 205, 50);
 }
-.app-offer .app-offer__heading {
+.app-offer__heading {
   text-align: center;
   font-size: clamp(2rem, 3vw, 3rem);
   margin: 30px 0;
 }
-.app-offer .app-offer__description {
+.app-offer__description {
   text-align: center;
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   width: 90%;
   line-height: 1.5rem;
 }
 @media (min-width: 720px) {
-  .app-offer .app-offer__description {
+  .app-offer__description {
     width: 75%;
   }
 }
 @media (min-width: 1024px) {
-  .app-offer .app-offer__description {
+  .app-offer__description {
     width: 60%;
   }
 }
-.app-offer .app-offer__card-wrapper {
+.app-offer__card-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,7 +200,7 @@
   margin-top: 40px;
   flex-wrap: wrap;
 }
-.app-offer .app-offer__card-wrapper .app-offer__card {
+.app-offer__card-wrapper .app-offer__card {
   width: clamp(20rem, 20rem + 2vw, 22rem);
   height: 60vh;
   margin: 20px;
@@ -215,27 +215,27 @@
   flex-direction: column;
 }
 @media (max-width: 768px) and (orientation: landscape) {
-  .app-offer .app-offer__card-wrapper .app-offer__card {
+  .app-offer__card-wrapper .app-offer__card {
     width: 40%;
     height: 80vh;
   }
 }
-.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-heading {
+.app-offer__card-wrapper .app-offer__card .app-offer__card-heading {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   width: 100%;
 }
-.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content {
+.app-offer__card-wrapper .app-offer__card .app-offer__card-content {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
-.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-description {
+.app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-description {
   margin-bottom: 20px;
 }
-.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-link {
+.app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-link {
   display: block;
   border-radius: 50px;
   padding: 10px;
@@ -248,7 +248,7 @@
   transition: 0.3s ease;
   text-decoration: none;
 }
-.app-offer .app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-link:hover {
+.app-offer__card-wrapper .app-offer__card .app-offer__card-content .app-offer__card-link:hover {
   background-color: white;
   color: black;
 }
@@ -349,25 +349,25 @@
   color: white;
   background-color: #04AA6D;
 }
-.app-contact .app-contact__heading {
+.app-contact__heading {
   font-size: clamp(2rem, 3vw, 3rem);
   margin: 30px 0;
 }
-.app-contact .app-contact__description {
+.app-contact__description {
   text-align: center;
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
 }
-.app-contact .app-contact__form {
+.app-contact__form {
   margin: 20px 0;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   text-align: center;
 }
-.app-contact .app-contact__form form p {
+.app-contact__form form p {
   margin-bottom: 20px;
   width: 100%;
   position: relative;
 }
-.app-contact .app-contact__form form p input {
+.app-contact__form form p input {
   padding: 15px;
   border: none;
   border-bottom: 2px solid white;
@@ -375,12 +375,12 @@
   color: white;
   font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
-.app-contact .app-contact__form form p textarea {
+.app-contact__form form p textarea {
   background-color: #04AA6D;
   border: 2px solid white;
   border-radius: 15px;
 }
-.app-contact .app-contact__form form p input[type=button], .app-contact .app-contact__form form p input[type=submit], .app-contact .app-contact__form form p input[type=reset] {
+.app-contact__form form p input[type=button], .app-contact__form form p input[type=submit], .app-contact__form form p input[type=reset] {
   background-color: transparent;
   border: 2px solid white;
   color: white;
@@ -394,7 +394,7 @@
   right: 50%;
   transform: translateX(50%);
 }
-.app-contact .app-contact__form form p input[type=button]:hover, .app-contact .app-contact__form form p input[type=submit]:hover, .app-contact .app-contact__form form p input[type=reset]:hover {
+.app-contact__form form p input[type=button]:hover, .app-contact__form form p input[type=submit]:hover, .app-contact__form form p input[type=reset]:hover {
   background-color: white;
   color: #04AA6D;
 }
@@ -414,10 +414,10 @@
     align-items: center;
   }
 }
-.app-footer .app-footer__nav {
+.app-footer__nav {
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
-.app-footer .app-footer__nav ul {
+.app-footer__nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -425,41 +425,41 @@
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .app-footer .app-footer__nav ul {
+  .app-footer__nav ul {
     flex-direction: row;
   }
 }
-.app-footer .app-footer__nav ul li {
+.app-footer__nav ul li {
   position: relative;
   margin: 15px 0;
 }
 @media (min-width: 768px) {
-  .app-footer .app-footer__nav ul li {
+  .app-footer__nav ul li {
     margin: 0 15px;
   }
 }
-.app-footer .app-footer__nav ul li a {
+.app-footer__nav ul li a {
   color: white;
   text-decoration: none;
 }
-.app-footer .app-footer__social-links {
+.app-footer__social-links {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.app-footer .app-footer__social-links .social-links__heading {
+.app-footer__social-links .social-links__heading {
   text-align: center;
   color: white;
   font-size: clamp(2rem, 3vw, 3rem);
 }
-.app-footer .app-footer__social-links .links {
+.app-footer__social-links .links {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.app-footer .app-footer__social-links .links .fa {
+.app-footer__social-links .links .fa {
   padding: 20px;
   width: 60px;
   font-size: 20px;
@@ -467,30 +467,30 @@
   text-decoration: none;
   margin: 10px;
 }
-.app-footer .app-footer__social-links .links .fa:hover {
+.app-footer__social-links .links .fa:hover {
   opacity: 0.7;
 }
-.app-footer .app-footer__social-links .links .fa-facebook {
+.app-footer__social-links .links .fa-facebook {
   background: #3B5998;
   color: white;
 }
-.app-footer .app-footer__social-links .links .fa-twitter {
+.app-footer__social-links .links .fa-twitter {
   background: #55ACEE;
   color: white;
 }
-.app-footer .app-footer__social-links .links .fa-google {
+.app-footer__social-links .links .fa-google {
   background: #dd4b39;
   color: white;
 }
-.app-footer .app-footer__social-links .links .fa-linkedin {
+.app-footer__social-links .links .fa-linkedin {
   background: #007bb5;
   color: white;
 }
-.app-footer .app-footer__social-links .links .fa-youtube {
+.app-footer__social-links .links .fa-youtube {
   background: #bb0000;
   color: white;
 }
-.app-footer .app-footer__social-links .links .fa-instagram {
+.app-footer__social-links .links .fa-instagram {
   background: #125688;
   color: white;
 }

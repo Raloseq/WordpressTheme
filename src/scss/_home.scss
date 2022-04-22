@@ -11,20 +11,20 @@
     z-index: 1;
     color: c.$main-color;
 
-    .app-home__heading {
+    &__heading {
         position: relative;
         z-index: 1;
         font-size: clamp(2rem, 3vw, 3rem);
     }
 
-    .app-home__description {
+    &__description {
         position: relative;
         z-index: 1;
         font-size: clamp(1.5rem, 2.5vw, 2rem);
         margin: 40px 0;
     }
 
-    .app-home__btn {
+    &__btn {
         position: relative;
         z-index: 1;
         padding: 15px;

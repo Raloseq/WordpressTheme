@@ -7,17 +7,17 @@
     color: white;
     background-color: #04AA6D;
 
-    .app-contact__heading {
+    &__heading {
         font-size: clamp(2rem, 3vw, 3rem);
         margin: 30px 0;
     }
 
-    .app-contact__description {
+    &__description {
         text-align: center;
         font-size: c.$description-size;
     }
 
-    .app-contact__form {
+    &__form {
         margin: 20px 0;
         font-size: clamp(1.2rem, 2vw, 1.5rem);
         text-align: center;
