@@ -19,21 +19,21 @@
                 <h3 class="app-offer__card-heading">Diet</h3>
                 <div class="app-offer__card-content">
                     <p class="app-offer__card-description">We will arrange a diet especially for you.</p>
-                    <a href="#" class="app-offer__card-link">Check</a>
+                    <a href="<?php echo site_url('/diet'); ?>" class="app-offer__card-link">Check</a>
                 </div>
             </div>
             <div class="app-offer__card" style="background-image: url(<?php echo get_theme_file_uri('images/card2.jpg') ?>)">
                 <h3 class="app-offer__card-heading">Trening plan</h3>
                 <div class="app-offer__card-content">
                     <p class="app-offer__card-description">We will prepare a training plan for you</p>
-                    <a href="#" class="app-offer__card-link">Check</a>
+                    <a href="<?php echo site_url('/trening-plan'); ?>" class="app-offer__card-link">Check</a>
                 </div>
             </div>
             <div class="app-offer__card" style="background-image: url(<?php echo get_theme_file_uri('images/card3.jpg') ?>)">
                 <h3 class="app-offer__card-heading">Motor preparation</h3>
                 <div class="app-offer__card-content">
                     <p class="app-offer__card-description">We will make a plan of motor preparation for you</p>
-                    <a href="#" class="app-offer__card-link">Check</a>
+                    <a href="<?php echo site_url('/motor-preparation'); ?>" class="app-offer__card-link">Check</a>
                 </div>
             </div>
         </div>

@@ -60,3 +60,28 @@ function rf_aboutus_edit($wp_customize)
 }
 
 add_action( 'customize_register', 'rf_aboutus_edit' );
+
+function rf_create_post_type()
+{
+    register_post_type( 'diets', array(
+        'labels' => array(
+            'name' => __('Diets'),
+            'singular_name' => 'Diet'
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'rewrite' => array( 'slug' => 'diets' ),
+        'show_in_rest' => true
+    ) );
+}
+
+add_action( 'init', 'rf_create_post_type' );
+
+function rf_add_post_type_to_query($query)
+{
+    if ( is_home(  ) && $query->is_main_query() ) {
+        $query->set( 'post_type', array( 'post', 'diets' ) );
+    }
+}
+
+add_action( 'pre_get_posts', 'rf_add_post_type_to_query' );

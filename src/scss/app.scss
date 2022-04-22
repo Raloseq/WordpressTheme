@@ -6,6 +6,7 @@
 @use 'blog';
 @use 'contact';
 @use 'footer';
+@use 'page';
 
 *, *::before,*::after {
     box-sizing: border-box;
