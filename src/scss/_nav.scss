@@ -1,13 +1,14 @@
 @use 'variables' as c;
+@use 'mixin' as m;
 
 .app-nav {
     position: fixed;
     background-color: c.$main-color;
-
     z-index: 99999;
     width: 100%;
     font-size: clamp(1rem, 2vw, 1.8rem);
     padding: 20px;
+    @include m.flex-center;
     ul {
         display: flex;
         justify-content: center;
@@ -37,6 +38,28 @@
                     width: 100%; 
                     left: 0; 
                   }
+            }
+        }
+    }
+
+    .app-nav__search {
+        form {
+            @include m.flex-center;
+            margin: 0 20px;
+            input {
+                color: white;
+                margin: 0;
+                border: 2px solid white;
+                &::placeholder {
+                    color:white;
+                }
+            }
+
+            input[type=submit] {
+                &:hover {
+                    background-color: white;
+                    color: c.$main-color;
+                }
             }
         }
     }

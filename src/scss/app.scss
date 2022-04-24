@@ -10,6 +10,8 @@
 @use 'page-diet';
 @use 'page-motor';
 @use 'error-404';
+@use 'search-form';
+@use 'search';
 
 *, *::before,*::after {
     box-sizing: border-box;

@@ -5,6 +5,9 @@
   width: 100%;
   font-size: clamp(1rem, 2vw, 1.8rem);
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .app-nav ul {
   display: flex;
@@ -34,6 +37,30 @@
 .app-nav ul li a:hover:after {
   width: 100%;
   left: 0;
+}
+.app-nav .app-nav__search form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+.app-nav .app-nav__search form input {
+  color: white;
+  margin: 0;
+  border: 2px solid white;
+}
+.app-nav .app-nav__search form input::-moz-placeholder {
+  color: white;
+}
+.app-nav .app-nav__search form input:-ms-input-placeholder {
+  color: white;
+}
+.app-nav .app-nav__search form input::placeholder {
+  color: white;
+}
+.app-nav .app-nav__search form input[type=submit]:hover {
+  background-color: white;
+  color: #11a06c;
 }
 
 .app-about {
@@ -241,7 +268,7 @@
   padding: 10px;
   width: 60%;
   margin: 0 auto;
-  border: 1px solid white;
+  border: 2px solid white;
   background-color: transparent;
   color: white;
   cursor: pointer;
@@ -328,7 +355,7 @@
   border-radius: 50px;
   width: 40%;
   padding: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
   color: black;
   background-color: transparent;
   cursor: pointer;
@@ -595,7 +622,7 @@
   padding: 10px;
   width: 60%;
   margin: 0 auto;
-  border: 1px solid #11a06c;
+  border: 2px solid #11a06c;
   background-color: transparent;
   color: #11a06c;
   cursor: pointer;
@@ -620,6 +647,50 @@
 .error-404-info .error-404-link:hover {
   background-color: #11a06c;
   color: white;
+}
+
+.search-form {
+  margin-bottom: 20px;
+}
+.search-form .search-form-headline {
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: #11a06c;
+}
+.search-form .search-form-inputs input {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  border: 2px solid #11a06c;
+  background-color: transparent;
+  color: #11a06c;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+.search-form .search-form-inputs input[type=submit]:hover {
+  background-color: #11a06c;
+  color: white;
+}
+
+.search {
+  text-align: center;
+  min-height: 80vh;
+}
+.search .app-search__result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 20px;
+}
+.search .app-search__result .app-search__heading {
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  margin-bottom: 10px;
+  color: #11a06c;
+}
+.search .app-search__result .app-search__description {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 *, *::before, *::after {

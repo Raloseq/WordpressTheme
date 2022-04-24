@@ -1,0 +1,25 @@
+@use 'variables' as c;
+@use 'mixin' as m;
+
+.search {
+    text-align: center;
+    min-height: 80vh;
+
+    .app-search__result {
+        @include m.flex-column-center;
+        margin: 10px 0;
+        padding: 20px;
+        
+        
+        .app-search__heading {
+            font-size: c.$heading-small;
+            margin-bottom: 10px;
+            color: c.$main-color;
+        }
+
+        .app-search__description {
+            font-size: c.$description-small;
+        }
+    }
+}
+

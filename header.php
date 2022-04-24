@@ -21,5 +21,8 @@
                     'theme_location' => 'primary'
                 ) );
             ?>
+            <div class="app-nav__search">
+                <?php get_search_form( ) ?>
+            </div>
         </nav>
     </header>

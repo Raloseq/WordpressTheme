@@ -1,0 +1,33 @@
+@use 'variables' as c;
+@use 'mixin' as m;
+
+
+.search-form {
+    margin-bottom: 20px;
+
+    .search-form-headline {
+        font-size: c.$heading-size;
+        color: c.$main-color;
+    }
+
+    .search-form-inputs {
+        input {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 50px;
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            border: 2px solid c.$main-color;
+            background-color: transparent;
+            color: c.$main-color;
+            transition: .3s ease-in;
+            cursor: pointer;
+        }
+
+        input[type=submit] {
+            &:hover {
+                background-color: c.$main-color;
+                color: white;
+            }
+        }
+    }
+}
