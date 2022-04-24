@@ -574,6 +574,54 @@
   margin: 20px auto;
 }
 
+.error-404-info {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #11a06c;
+  text-align: center;
+}
+.error-404-info .error-404-info__heading {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 50px;
+}
+.error-404-info .error-404-link {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  display: block;
+  border-radius: 50px;
+  padding: 10px;
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid #11a06c;
+  background-color: transparent;
+  color: #11a06c;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+@media (min-width: 576px) {
+  .error-404-info .error-404-link {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .error-404-info .error-404-link {
+    width: 40%;
+  }
+}
+@media (min-width: 992px) {
+  .error-404-info .error-404-link {
+    width: 30%;
+  }
+}
+.error-404-info .error-404-link:hover {
+  background-color: #11a06c;
+  color: white;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;

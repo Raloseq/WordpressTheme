@@ -1,0 +1,48 @@
+@use 'variables' as c;
+@use 'mixin' as m;
+
+.error-404-info {
+    width: 100%;
+    height: 70vh;
+    @include m.flex-column-center;
+    color: c.$main-color;
+    text-align: center;
+
+    .error-404-info__heading {
+        font-size: c.$heading-size;
+        margin-bottom: 50px;
+    }
+
+    .error-404-link {
+        font-size: c.$description-size;
+        display: block;
+        border-radius: 50px;
+        padding: 10px;
+        width: 60%;
+        margin: 0 auto;
+        border: 1px solid c.$main-color;
+        background-color: transparent;
+        color: c.$main-color;
+        cursor: pointer;
+        transition: .3s ease;
+        text-decoration: none;
+
+        @media (min-width: 576px) {
+            width: 50%;
+        }
+
+        @media (min-width: 768px) {
+            width: 40%;
+        }
+         
+        @media (min-width: 992px) {
+            width: 30%;
+        }
+
+
+        &:hover {
+            background-color: c.$main-color;
+            color: white;
+        }
+    }
+}

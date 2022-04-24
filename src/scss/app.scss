@@ -9,6 +9,7 @@
 @use 'page';
 @use 'page-diet';
 @use 'page-motor';
+@use 'error-404';
 
 *, *::before,*::after {
     box-sizing: border-box;
