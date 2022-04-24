@@ -7,6 +7,8 @@
 @use 'contact';
 @use 'footer';
 @use 'page';
+@use 'page-diet';
+@use 'page-motor';
 
 *, *::before,*::after {
     box-sizing: border-box;

@@ -1,6 +1,6 @@
 .app-nav {
   position: fixed;
-  background-color: rgb(50, 205, 50);
+  background-color: #11a06c;
   z-index: 99999;
   width: 100%;
   font-size: clamp(1rem, 2vw, 1.8rem);
@@ -42,7 +42,7 @@
   align-items: center;
   flex-direction: column;
   padding: 20px 20px 50px;
-  background-color: rgb(50, 205, 50);
+  background-color: #11a06c;
   color: white;
 }
 .app-about__heading {
@@ -77,7 +77,7 @@
   flex-direction: column;
   text-align: center;
   z-index: 1;
-  color: rgb(50, 205, 50);
+  color: #11a06c;
 }
 .app-home__heading {
   position: relative;
@@ -96,14 +96,14 @@
   padding: 15px;
   border-radius: 50px;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
-  border: 2px solid rgb(50, 205, 50);
+  border: 2px solid #11a06c;
   background-color: transparent;
-  color: rgb(50, 205, 50);
+  color: #11a06c;
   transition: 0.3s ease-in;
   cursor: pointer;
 }
 .app-home__btn:hover {
-  background-color: rgb(50, 205, 50);
+  background-color: #11a06c;
   color: white;
 }
 .app-home .waves {
@@ -112,7 +112,7 @@
   left: 0;
   right: 0;
   height: 100px;
-  background-color: rgb(50, 205, 50);
+  background-color: #11a06c;
   transition: 500ms;
 }
 @media (min-width: 720px) {
@@ -169,7 +169,7 @@
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  color: rgb(50, 205, 50);
+  color: #11a06c;
 }
 .app-offer__heading {
   text-align: center;
@@ -522,12 +522,33 @@
   height: 100%;
 }
 .app-page__content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.app-page__content h2 {
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  margin-bottom: 15px;
+}
+.app-page__content p {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  text-align: justify;
+}
+.app-page__content ul {
+  padding-left: 40px;
+  margin: 20px 0;
+}
+
+.app-page__content-diet {
   padding: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
 }
-.app-page__content .diet-card {
+.app-page__content-diet .diet-card {
   display: flex;
   flex-direction: column;
   margin: 15px;
@@ -535,18 +556,22 @@
   width: clamp(22rem, 20rem + 2vw, 24rem);
   box-shadow: 0px 0px 23px 4px rgb(66, 68, 90);
 }
-.app-page__content .diet-card h2 {
+.app-page__content-diet .diet-card h2 {
   font-size: clamp(1.8rem, 2vw, 2.2rem);
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid black;
 }
-.app-page__content .diet-card p {
+.app-page__content-diet .diet-card p {
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   text-align: justify;
 }
-.app-page__content .diet-card--warning {
+.app-page__content-diet .diet-card--warning {
   font-weight: 700;
+}
+
+.motor-prep-pricing {
+  margin: 20px auto;
 }
 
 *, *::before, *::after {

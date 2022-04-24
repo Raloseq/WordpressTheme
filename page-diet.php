@@ -10,7 +10,7 @@
         <img src="<?php echo get_theme_file_uri('images/header.jpg') ?>" alt="">
     </section>
 
-    <section class="app-page__content">
+    <section class="app-page__content-diet app-page__content">
         <?php 
             $dietPost = new WP_Query( array(
                 'posts_per_page' => -1,

@@ -2,7 +2,7 @@
 @use 'mixin' as m;
 
 .app-footer {
-    background-color: #11a06c;
+    background-color: c.$main-color;
     padding: c.$main-padding;
     
     @include m.flex-column-center;

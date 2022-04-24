@@ -1,0 +1,43 @@
+@use 'variables' as c;
+@use 'mixin' as m;
+
+.app-page {
+
+    &__content-diet {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+
+        .diet-card {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            padding: 20px;
+            width: clamp(22rem, calc(20rem + 2vw), 24rem);
+            box-shadow: 0px 0px 23px 4px rgba(66, 68, 90, 1);
+
+            @media (min-width: 768px) {
+
+            }
+
+            h2 {
+                font-size: c.$heading-small;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid black;
+            }
+
+            p {
+                font-size: c.$description-small;
+                text-align: justify;
+            }
+
+            &--warning {
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -65,13 +65,18 @@ function rf_create_post_type()
 {
     register_post_type( 'diets', array(
         'labels' => array(
-            'name' => __('Diets'),
+            'name' => 'Diets',
+            'add_new_item' => 'Add New Diet',
+            'edit_item' => 'Edit Diet',
+            'all_items' => 'All Diets',
             'singular_name' => 'Diet'
         ),
         'public' => true,
         'has_archive' => false,
         'rewrite' => array( 'slug' => 'diets' ),
-        'show_in_rest' => true
+        'show_in_rest' => true,
+        'supports' => ['title','editor','thumbnail'],
+        'menu_icon' => 'dashicons-media-text'
     ) );
 }
 
