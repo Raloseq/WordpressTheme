@@ -4,16 +4,33 @@
 .app-nav {
     position: fixed;
     background-color: c.$main-color;
-    z-index: 99999;
+    z-index: 99;
     width: 100%;
     font-size: clamp(1rem, 2vw, 1.8rem);
     padding: 20px;
     @include m.flex-center;
+    min-height: 10vh;
+
+    @media (orientation: landscape) {
+        min-height: 15vh;
+    }
+    
     ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include m.flex-center;
         list-style-type: none;
+
+        &.show {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            font-size: c.$heading-small;
+            min-height: 40vh;
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
 
         li {
             position: relative; 
@@ -42,7 +59,11 @@
         }
     }
 
+
     .app-nav__search {
+        @media (max-width: 768px) {
+            display: none;
+        }
         form {
             @include m.flex-center;
             margin: 0 20px;
@@ -63,4 +84,21 @@
             }
         }
     }
+}
+
+.app-header__hamburger {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 999;
+    right: 4%;
+    top: 1%;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+
 }

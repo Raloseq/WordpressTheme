@@ -10,9 +10,9 @@
 </head>
 <body <?php body_class(); ?>>
     <header class="app-header">
-        <span class="toggle">
-
-        </span>
+        <button class="app-header__hamburger" id="test">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
         <nav class="app-nav">
             <?php 
                 wp_nav_menu( array( 

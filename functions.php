@@ -15,7 +15,8 @@ add_action( 'wp_enqueue_scripts', 'rf_register_styles' );
 
 function rf_register_scripts()
 {
-    wp_enqueue_script( 'rf-main', get_template_directory_uri(  ) . "/assets/js/app.js" );
+    wp_register_script('rf-main', get_template_directory_uri(  ) . "/assets/js/app.js", '', '1.1', true);
+    wp_enqueue_script('rf-main');
 }
 
 add_action( 'wp_enqueue_scripts', 'rf_register_scripts' );

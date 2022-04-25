@@ -7,7 +7,13 @@
   \***********************/
 /***/ (() => {
 
-
+var hamburger = document.querySelector('.app-header__hamburger');
+var nav = document.querySelector('#menu-main-menu');
+document.addEventListener('DOMContentLoaded', function () {
+  hamburger.addEventListener('click', function () {
+    nav.classList.toggle('show');
+  });
+});
 
 /***/ }),
 

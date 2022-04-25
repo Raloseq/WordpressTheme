@@ -1,19 +1,38 @@
 .app-nav {
   position: fixed;
   background-color: #11a06c;
-  z-index: 99999;
+  z-index: 99;
   width: 100%;
   font-size: clamp(1rem, 2vw, 1.8rem);
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 10vh;
+}
+@media (orientation: landscape) {
+  .app-nav {
+    min-height: 15vh;
+  }
 }
 .app-nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style-type: none;
+}
+.app-nav ul.show {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  min-height: 40vh;
+}
+@media (max-width: 768px) {
+  .app-nav ul {
+    display: none;
+  }
 }
 .app-nav ul li {
   position: relative;
@@ -38,6 +57,11 @@
   width: 100%;
   left: 0;
 }
+@media (max-width: 768px) {
+  .app-nav .app-nav__search {
+    display: none;
+  }
+}
 .app-nav .app-nav__search form {
   display: flex;
   justify-content: center;
@@ -61,6 +85,23 @@
 .app-nav .app-nav__search form input[type=submit]:hover {
   background-color: white;
   color: #11a06c;
+}
+
+.app-header__hamburger {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 999;
+  right: 4%;
+  top: 1%;
+}
+@media (min-width: 768px) {
+  .app-header__hamburger {
+    display: none;
+  }
 }
 
 .app-about {
