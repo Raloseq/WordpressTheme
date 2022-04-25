@@ -33,6 +33,19 @@ function rf_menus()
 
 add_action( 'init', 'rf_menus' );
 
+function rf_register_sidebar()
+{
+    register_sidebar( array(
+        'id' => 'single-page',
+        'name' => 'single-page-sidebar',
+        'description' => 'sidebar for navigate throught posts when we read single post',
+        'before_widget' => '<div class="rf_before_widget">',
+        'after_widget' => '</div>'
+    ) );
+}
+
+add_action( 'widgets_init', 'rf_register_sidebar' );
+
 function rf_aboutus_edit($wp_customize)
 {
     $wp_customize->add_section( 'rf-aboutus-section', array(

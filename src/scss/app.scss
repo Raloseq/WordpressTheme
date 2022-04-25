@@ -12,6 +12,7 @@
 @use 'error-404';
 @use 'search-form';
 @use 'search';
+@use 'single';
 
 *, *::before,*::after {
     box-sizing: border-box;

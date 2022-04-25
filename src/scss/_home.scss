@@ -4,9 +4,10 @@
 .app-home {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     @include m.flex-column-center;
+    background-color: c.$main-color;
     text-align: center;
     z-index: 1;
     color: c.$main-color;
