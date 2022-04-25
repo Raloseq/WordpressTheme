@@ -760,6 +760,18 @@
     margin: 0;
   }
 }
+.app-page__content-single .post-content .post-content__heading {
+  width: 100%;
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  border-bottom: 4px solid #11a06c;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.app-page__content-single .post-content .post-content__heading .post-content__heading-author {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+}
 .app-page__content-single .post-sidebar {
   background-color: #11a06c;
   color: white;

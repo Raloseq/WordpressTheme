@@ -19,6 +19,20 @@
             padding: 20px;
             margin: 0;
         }
+
+        .post-content__heading {
+            width: 100%;
+            font-size: c.$heading-small;
+            border-bottom: 4px solid c.$main-color;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .post-content__heading-author {
+                font-size: c.$description-size;
+            }
+        }
     }
 
     .post-sidebar {
