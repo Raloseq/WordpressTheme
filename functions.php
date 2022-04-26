@@ -104,3 +104,30 @@ function rf_add_post_type_to_query($query)
 }
 
 add_action( 'pre_get_posts', 'rf_add_post_type_to_query' );
+
+function rf_comment_form_fields($fields)
+{
+    $fields['url'] = '';
+    $fields['cookies'] = '';
+
+    return $fields;
+}
+
+add_filter( 'comment_form_default_fields', 'rf_comment_form_fields' );
+
+function rf_move_comment_field($fields) 
+{
+    $comment_field = $fields['comment'];
+    unset( $fields['comment'] );
+    $fields['comment'] = $comment_field;
+    return $fields;
+}
+
+add_filter( 'comment_form_fields', 'rf_move_comment_field' );
+
+function rf_custom_comment_reply($link) 
+{
+    $link = str_replace('Reply', 'Reply to this comment', $link);
+    return $link;
+}
+add_filter('comment_reply_link', 'rf_custom_comment_reply');

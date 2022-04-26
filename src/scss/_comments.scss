@@ -1,0 +1,139 @@
+@use 'variables' as c;
+@use 'mixin' as m;
+
+.post-comment {
+    margin-top: 20px;
+
+    .comment-title {
+        text-align: center;
+    }
+
+    &__form {
+        text-align: center;
+        @include m.flex-column-center;
+        
+        form {
+            margin: 30px auto;
+            width: 100%;
+
+            @media (min-width: 768px) {
+                width: 70%;
+                
+            }
+
+            input {
+                margin: 10px 0;
+                padding: 10px;
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
+                border: 2px solid c.$main-color;
+                background-color: transparent;
+                color: c.$main-color;
+                transition: .3s ease-in;
+                width: 100%;
+            }
+    
+            input[type=submit] {
+                display: block;
+                margin: 15px auto;
+                cursor: pointer;
+                width: 70%;
+                @media (min-width: 768px) {
+                    width: 50%;
+                }
+
+                &:hover {
+                    background-color: c.$main-color;
+                    color: white;
+                }
+            }
+
+            .comment-form-comment {
+                display: flex;
+                flex-direction: column;
+
+                textarea {
+                    width: 100%;
+                    border: 2px solid c.$main-color;
+                }
+            }
+        }
+    }
+
+    &__comments {
+        width: 100%;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            width: 80%;
+        }
+
+        @media (min-width:1024px) {
+            width: 60%;
+        }
+
+        .comment {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+
+            .comment-author {
+                display: flex;
+                align-items: center;
+                font-size: c.$description-size;
+                border-top: 3px solid c.$main-color;
+                border-left: 3px solid c.$main-color;
+                border-right: 3px solid c.$main-color;
+
+                img {
+                    margin-right: 10px;
+                    padding: 10px 0 0 10px;
+                }
+
+                .fn {
+                    margin-right: 10px;
+                    font-weight: 700;
+                }
+            }
+            
+            .comment-meta {
+                padding: 10px;
+                border-right: 3px solid c.$main-color;
+                border-left: 3px solid c.$main-color;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            p {
+                font-size: c.$description-size;
+                padding: 20px;
+                background-color: #04AA6D;
+                color: white;
+            }
+
+            .depth-2 {
+                margin-left: 40px;
+            }
+
+            .depth-3 {
+                margin-left: 80px;
+            }
+
+            .reply {
+                a {
+                    display: block;
+                    margin: 10px 0;
+                    font-size: clamp(1rem, 1.5vw, 1.5rem);
+                    text-decoration: none;
+                    text-align: right;
+                    color: black;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

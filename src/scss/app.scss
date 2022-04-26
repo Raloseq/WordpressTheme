@@ -13,6 +13,7 @@
 @use 'search-form';
 @use 'search';
 @use 'single';
+@use 'comments';
 
 *, *::before,*::after {
     box-sizing: border-box;
