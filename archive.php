@@ -2,7 +2,7 @@
 
     <section class="app-page__hero">
         <div class="app-page__hero-content">
-            <h1 class="app-page__heading"><?php the_title()?></h1>
+            <h1 class="app-page__heading"><?php single_tag_title();?></h1>
         </div>
         <img src="<?php echo get_theme_file_uri('images/header.jpg') ?>" alt="">
     </section>

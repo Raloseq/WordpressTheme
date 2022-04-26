@@ -61,6 +61,7 @@
                     }
                 ?>
             </div>
+            <a href="<?php echo site_url('/blog')?>" class="app-blog__blog-link">All posts</a>
         </div>
         
     </section>

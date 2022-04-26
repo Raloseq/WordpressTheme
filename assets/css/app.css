@@ -418,6 +418,34 @@
   background-color: black;
   color: white;
 }
+.app-blog .foreground .app-blog__blog-link {
+  display: block;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 0 auto 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .app-blog .foreground .app-blog__blog-link {
+    width: 30%;
+  }
+}
+@media (min-width: 1024px) {
+  .app-blog .foreground .app-blog__blog-link {
+    width: 10%;
+  }
+}
+.app-blog .foreground .app-blog__blog-link:hover {
+  background-color: white;
+  color: black;
+}
 
 .app-contact {
   display: flex;
@@ -458,6 +486,8 @@
   background-color: #04AA6D;
   border: 2px solid white;
   border-radius: 15px;
+  color: white;
+  font-size: 1.2rem;
 }
 .app-contact__form form p input[type=button], .app-contact__form form p input[type=submit], .app-contact__form form p input[type=reset] {
   background-color: transparent;
