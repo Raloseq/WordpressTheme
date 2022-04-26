@@ -1,7 +1,7 @@
 <?php
 
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 300, 300);
+set_post_thumbnail_size( 300, 204);
 add_image_size( 'single-post-thumbnail', 590, 180 );
 
 function rf_register_styles()
@@ -39,6 +39,13 @@ function rf_register_sidebar()
         'id' => 'single-page',
         'name' => 'single-page-sidebar',
         'description' => 'sidebar for navigate throught posts when we read single post',
+        'before_widget' => '<div class="rf_before_widget">',
+        'after_widget' => '</div>'
+    ) );
+
+    register_sidebar( array(
+        'id' => 'blog-page',
+        'name' => 'blog-page-sidebar',
         'before_widget' => '<div class="rf_before_widget">',
         'after_widget' => '</div>'
     ) );

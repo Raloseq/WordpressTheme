@@ -1,3 +1,5 @@
+@use 'variables' as c;
+
 @mixin flex-column-center {
     display: flex;
     justify-content: center;
@@ -9,4 +11,82 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin blog-card {
+    .app-blog__post {
+        margin: 20px auto;
+        width: clamp(20rem, calc(20rem + 4vw), 22rem);
+        overflow: hidden;
+        box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+        border-radius: 1em;
+        background: #ECE9E6;
+        background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+        color: black;
+
+        .app-blog__post-header {
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+
+        .app-blog__post-content {
+            padding: 20px;
+            min-height: 200px;
+
+            .app-blog__post-date {
+
+            }
+
+            .app-blog__post-tags {
+                margin: 5px 0;
+                a {
+                    display: inline-block;
+                    background-color: c.$main-color;
+                    border-radius: 20px;
+                    padding: 2px 5px;
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+
+            .app-blog__post-title {
+                margin: 10px 0;
+                font-size: 1.5rem;
+                text-transform: capitalize;
+            }
+
+            .app-blog__post-excerpt {
+                font-size: 1.2rem;
+            }
+        }
+
+        .app-blog__post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px 20px;
+
+            .post-footer__permalink {
+                text-align: center;
+                display: block;
+                border-radius: 50px;
+                width: 40%;
+                padding: 10px;
+                border: 2px solid black;
+                color: black;
+                background-color: transparent;
+                cursor: pointer;
+                transition: .3s ease;
+                text-decoration: none;
+                
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
 }

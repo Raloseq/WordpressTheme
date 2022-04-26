@@ -54,6 +54,8 @@
                 textarea {
                     width: 100%;
                     border: 2px solid c.$main-color;
+                    color: c.$main-color;
+                    font-size: c.$description-small;
                 }
             }
         }
