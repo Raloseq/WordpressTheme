@@ -15,11 +15,21 @@
         </button>
         <nav class="app-nav">
             <?php 
-                wp_nav_menu( array( 
-                    'menu' => 'primary',
-                    'container' => 'app-nav',
-                    'theme_location' => 'primary'
-                ) );
+                if( is_page(116) ) {
+                    wp_nav_menu( array( 
+                        'menu' => 'primary',
+                        'container' => 'app-nav',
+                        'theme_location' => 'primary'
+                    ) );
+                } else {
+                    wp_nav_menu( array( 
+                        'menu' => 'blog',
+                        'container' => 'app-nav',
+                        'theme_location' => 'blog'
+                    ) );
+                }
+                
+                
             ?>
             <div class="app-nav__search">
                 <?php get_search_form( ) ?>

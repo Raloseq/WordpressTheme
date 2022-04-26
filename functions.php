@@ -25,7 +25,8 @@ function rf_menus()
 {
     $locations = array( 
         'primary' => 'Main Navbar',
-        'footer'  => 'Footer Navbar'
+        'footer'  => 'Footer Navbar',
+        'blog' => 'Second Main Navbar'
     );
 
     register_nav_menus( $locations );
