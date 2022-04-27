@@ -59,11 +59,48 @@
                             
                         }
                     }
+
+                    wp_reset_postdata();
                 ?>
             </div>
             <a href="<?php echo site_url('/blog')?>" class="app-blog__blog-link">All posts</a>
         </div>
         
+    </section>
+    <section class="app-testimonials" id="testimonials">
+        <h2 class="app-testimonials__heading">Testimonials</h2>
+        <div class="container">
+            <div class="testimonial">
+                
+                <div class="slide-row"> 
+                    <?php
+
+                        $testimonials = new WP_Query( array(
+                            'post_type' => 'testimonials',
+                            'posts_per_page' => -1,
+                        ) );
+
+                        if ( $testimonials->have_posts( ) ) :
+                            while( $testimonials->have_posts( ) ) : $testimonials->the_post( )
+                    ?>
+                            <div class="slide-col">
+                                <div class="user-text">
+                                    <p><?php the_content( ) ?></p>
+                                    <h3><?php the_title( ) ?></h3>
+                                </div>
+                                <div class="user-img">
+                                    <?php the_post_thumbnail( 'testimonials-thumbnail' ); ?>
+                                </div>
+                            </div>
+                    <?php endwhile; endif; ?>
+                </div>  
+            </div> 
+            <div class="testimonial-controls">
+                <a class="prev"><i class="fa fa-arrow-left"></i></a>
+                <a class="next"><i class="fa fa-arrow-right"></i></a>
+            </div>
+            
+        </div>
     </section>
     <section id="contact" class="app-contact">	
         <h2 class="app-contact__heading">Contact</h2>

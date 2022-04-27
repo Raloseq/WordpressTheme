@@ -7,13 +7,35 @@
   \***********************/
 /***/ (() => {
 
+// Hamburger
 var hamburger = document.querySelector('.app-header__hamburger');
 var nav = document.querySelector('#menu-main-menu');
 document.addEventListener('DOMContentLoaded', function () {
   hamburger.addEventListener('click', function () {
     nav.classList.toggle('show');
   });
-});
+}); // Testimonial
+
+var sliderItems = document.querySelectorAll('.slide-col');
+var next = document.querySelector('.next');
+var prev = document.querySelector('.prev');
+sliderItems[0].classList.add('active-slider');
+var index = 0;
+
+var nextItem = function nextItem() {
+  sliderItems[index].classList.remove('active-slider');
+  index = (index + 1) % sliderItems.length;
+  sliderItems[index].classList.add('active-slider');
+};
+
+var prevItem = function prevItem() {
+  sliderItems[index].classList.remove('active-slider');
+  index = (index - 1 + sliderItems.length) % sliderItems.length;
+  sliderItems[index].classList.add('active-slider');
+};
+
+next.addEventListener('click', nextItem);
+prev.addEventListener('click', prevItem);
 
 /***/ }),
 

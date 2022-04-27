@@ -3,6 +3,7 @@
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 300, 204);
 add_image_size( 'single-post-thumbnail', 590, 180 );
+add_image_size( 'testimonials-thumbnail', 300, 450 );
 
 function rf_register_styles()
 {
@@ -83,7 +84,7 @@ function rf_aboutus_edit($wp_customize)
 
 add_action( 'customize_register', 'rf_aboutus_edit' );
 
-function rf_create_post_type()
+function rf_create_post_type_diet()
 {
     register_post_type( 'diets', array(
         'labels' => array(
@@ -102,12 +103,33 @@ function rf_create_post_type()
     ) );
 }
 
-add_action( 'init', 'rf_create_post_type' );
+add_action( 'init', 'rf_create_post_type_diet' );
+
+function rf_create_post_type_testimonials()
+{
+    register_post_type( 'testimonials', array(
+        'labels' => array(
+            'name' => 'Testimonials',
+            'add_new_item' => 'Add New Testimonial',
+            'edit_item' => 'Edit Testimonial',
+            'all_items' => 'All Testimonials',
+            'singular_name' => 'Testimonial'
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'rewrite' => array( 'slug' => 'testimonials' ),
+        'show_in_rest' => true,
+        'supports' => ['title','editor','thumbnail'],
+        'menu_icon' => 'dashicons-groups'
+    ) );
+}
+
+add_action( 'init', 'rf_create_post_type_testimonials' );
 
 function rf_add_post_type_to_query($query)
 {
     if ( is_home(  ) && $query->is_main_query() ) {
-        $query->set( 'post_type', array( 'post', 'diets' ) );
+        $query->set( 'post_type', array( 'post', 'diets', 'testimonials' ) );
     }
 }
 
@@ -138,4 +160,5 @@ function rf_custom_comment_reply($link)
     $link = str_replace('Reply', 'Reply to this comment', $link);
     return $link;
 }
+
 add_filter('comment_reply_link', 'rf_custom_comment_reply');

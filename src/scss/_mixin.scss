@@ -24,11 +24,21 @@
         background: linear-gradient(to right, #FFFFFF, #ECE9E6);
         color: black;
 
+        &:hover {
+            .app-blog__post-header {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
         .app-blog__post-header {
+            overflow: hidden;
             img {
                 display: block;
                 margin: 0 auto;
                 width: 100%;
+                transition: .2s ease-out;
             }
         }
 
@@ -86,6 +96,7 @@
                     background-color: black;
                     color: white;
                 }
+
             }
         }
     }
